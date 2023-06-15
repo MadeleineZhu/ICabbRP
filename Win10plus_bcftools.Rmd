@@ -6,7 +6,7 @@
   pacman -Syuu
   pacman -Syu
   pacman -Su
-# May need to restart the application.
+# Restart the application and repeat the process untill there is no new updates
 # Install the mingw-w64 GCC in MSYS2 with the following code:
   pacman -S mingw-w64-x86_64-gcc
   pacman -S mingw-w64-ucrt-x86_64-gcc
@@ -19,3 +19,5 @@
   pacman -S mingw-w64-x86_64-libdeflate mingw-w64-x86_64-zlib mingw-w64-x86_64-bzip2
   pacman -S mingw-w64-x86_64-xz mingw-w64-x86_64-curl mingw-w64-x86_64-autotools
   pacman -S mingw-w64-x86_64-tools-git # only needed for building libraries compatible with MSVC
+
+#Relunch the MSYS2 MINGW64 application
