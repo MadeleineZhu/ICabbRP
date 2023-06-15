@@ -1,9 +1,21 @@
 # Need to download the MSYS2 plaftform for Windows 10 or Windows 11 system. Link to the MSYS2 website: https://www.msys2.org/
-# Follow the installation protocol provided by the websit. Once installed, open the MSYS2 application from windows or "excuting msys2_shell.cmd"
+# Follow the installation protocol provided by the websit. Once installed, open the MSYS2 application from windows or excuting "msys2_shell.cmd"
 # After the initial run, restart MSYS2.
-# Update the packages in 
 
-
+# Update the packages in MSYS2:
+  pacman -Syuu
+  pacman -Syu
+  pacman -Su
+# May need to restart the application.
 # Install the mingw-w64 GCC in MSYS2 with the following code:
+  pacman -S mingw-w64-x86_64-gcc
   pacman -S mingw-w64-ucrt-x86_64-gcc
-  
+# Install the mingw-w64 GDB in MSYS2 with the following code:
+  pacman -S mingw-w64-x86_64-gdb
+
+# Close the MSYS2 application and relunch the "MSYS2 MINGW64" application.
+# Install the compilers and the following package list:
+  pacman -S base-devel mingw-w64-x86_64-toolchain
+  pacman -S mingw-w64-x86_64-libdeflate mingw-w64-x86_64-zlib mingw-w64-x86_64-bzip2
+  pacman -S mingw-w64-x86_64-xz mingw-w64-x86_64-curl mingw-w64-x86_64-autotools
+  pacman -S mingw-w64-x86_64-tools-git # only needed for building libraries compatible with MSVC
