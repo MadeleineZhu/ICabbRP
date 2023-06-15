@@ -18,6 +18,7 @@
   pacman -S base-devel mingw-w64-x86_64-toolchain
   pacman -S mingw-w64-x86_64-libdeflate mingw-w64-x86_64-zlib mingw-w64-x86_64-bzip2
   pacman -S mingw-w64-x86_64-xz mingw-w64-x86_64-curl mingw-w64-x86_64-autotools
-  pacman -S mingw-w64-x86_64-tools-git # only needed for building libraries compatible with MSVC
+  pacman -S mingw-w64-x86_64-tools-git 
+# Last one only needed for building libraries compatible with MSVC
 
 #Relunch the MSYS2 MINGW64 application
