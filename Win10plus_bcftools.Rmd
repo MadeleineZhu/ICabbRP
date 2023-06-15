@@ -1,5 +1,6 @@
 # Need to download the MSYS2 plaftform for Windows 10 or Windows 11 system. Link to the MSYS2 website: https://www.msys2.org/
-# Follow the installation protocol provided by the websit. Once installed, open the MSYS2 application from windows or excuting msys2_shell.cmd. After the initial run, restart MSYS2.
+# Follow the installation protocol provided by the websit. Once installed, open the MSYS2 application from windows or "excuting msys2_shell.cmd"
+# After the initial run, restart MSYS2.
 # Update the packages in 
 
 
