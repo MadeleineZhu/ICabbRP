@@ -20,5 +20,40 @@
   pacman -S mingw-w64-x86_64-xz mingw-w64-x86_64-curl mingw-w64-x86_64-autotools
   pacman -S mingw-w64-x86_64-tools-git 
 # Last one only needed for building libraries compatible with MSVC
+# Relunch the MSYS2 MINGW64 application
 
-#Relunch the MSYS2 MINGW64 application
+# Copy the bcftools download link on their current release page http://www.htslib.org/download/
+wget https://github.com/samtools/bcftools/releases/download/1.17/bcftools-1.17.tar.bz2
+# Extract the bcftools file and check the files
+tar xvf bcftools-1.17.tar.bz2
+ls
+# Make a new folder for all installation files
+mkdir apps
+# Check if the folder is made
+ls
+# Create a fodler for bcftools files
+mkdir apps/bcftools
+# Change the directory to the newly made folder
+cd /apps/bcftools
+# Check and copy the path
+pwd
+# Change the working directory into the extracted bcftools files
+cd 
+cd /bcftools-1.17
+# Follow the installation instruction on the bcftools installation web page, and install the files into the folder created
+./configure --prefix = file/path/apps/bcftools
+make
+make install
+# change the directory to the bin folder of bcftools
+cd file/path/apps/bcftools/bin
+# Call and check if the bcftools file is intalled
+bcftools
+
+# Copy the bashrc file for back up
+cd
+cp .bashrc bashrc.bak
+# Permanantly change the bcftools command so that it can be called in all directory
+nano .bashrc
+# Scroll down to the bottom page of the nano reader and add the path for bcftools
+export PATH=$PATH:/file/path/apps/bcftools/bin
+# Exit the nano reader and relaunch or open a new page in MSYS2 MINGW64. The bcftools command will now call the package in all directory
